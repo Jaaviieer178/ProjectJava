@@ -6,9 +6,9 @@ spring:
     name: java
 
   datasource:
-    url: jdbc:mysql://localhost:3336/ecommerce
-    username: root
-    password: 220022
+    url: jdbc:mysql://localhost:3336/{{Your Database}}
+    username: Your username
+    password: Your password
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -22,13 +22,8 @@ spring:
 
   security:
     user:
-      name: Javier
-      password: 2002
-    ##jwt:
-      #secret-key: mySuperSecretKey123456789
-      #expiration: 86400000
-      #refresh-token:
-       # expiration: 604800000
+      name: Your username
+      password: Your password
 
   springdoc:
     swagger-ui:
