@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: dev
+
+  application:
+    name: java
+
+  datasource:
+    url: jdbc:mysql://localhost:3336/ecommerce
+    username: root
+    password: 220022
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+
+  security:
+    user:
+      name: Javier
+      password: 2002
+    ##jwt:
+      #secret-key: mySuperSecretKey123456789
+      #expiration: 86400000
+      #refresh-token:
+       # expiration: 604800000
+
+  springdoc:
+    swagger-ui:
+      path: /api-docs
+
+  logging:
+    level:
+      org.springframework.web: DEBUG

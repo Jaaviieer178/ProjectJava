@@ -7,8 +7,14 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+/** Repositorio JPA para la entidad RoleModel.
+ * Gestiona el acceso a roles definidos en el sistema */
 @Repository
 public interface IRoleRepository extends JpaRepository<RoleModel, Long> {
-    Optional<RoleModel> findByName(ERole name);
 
+    /** Busca un rol por su enumeración ERole.
+     * @param name nombre del rol (ej: ADMIN, USER)
+     * @return un Optional con el rol correspondiente*/
+
+    Optional<RoleModel> findByName(ERole name);
 }
